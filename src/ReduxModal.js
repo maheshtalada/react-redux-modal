@@ -28,6 +28,7 @@ class ReduxModal extends Component {
           {this.props.modals.map((modal, i) => {
             return (
               <Modal
+                data={this.props.data}
                 index={i}
                 key={modal.id}
                 removeModal={this.props.removeModal}
