@@ -72,13 +72,19 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.renderDev = this.renderDev.bind(this);
+    this.modalCloseListener = this.modalCloseListener.bind(this);
+  }
+
+  modalCloseListener() {
+    console.log('closed');
   }
 
   addModalLarge() {
     modal.add(myLargeModalComponent, {
       title: 'This one there is no close botton.',
       size: 'large',
-      hideCloseButton: true
+      hideCloseButton: true,
+      onCloseModal: this.modalCloseListener
     });
   }
 

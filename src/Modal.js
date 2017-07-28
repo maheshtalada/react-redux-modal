@@ -6,6 +6,8 @@ import classnames from 'classnames';
 class Modal extends Component {
   constructor(props) {
     super(props);
+
+    this.closeModal = this.closeModal.bind(this);
   }
 
   handleOnOutsideClick(e) {
@@ -24,6 +26,11 @@ class Modal extends Component {
     }
   }
 
+  closeModal() {
+    this.props.removeModal(this.props.id);
+    this.props.options.onCloseModal && this.props.options.onCloseModal();
+  }
+
   render() {
     return (
       <div className="rrm-holder" style={{zIndex: `999${this.props.index}`}}>
@@ -38,14 +45,14 @@ class Modal extends Component {
                         <button
                             type="button"
                             className="rr-close rrm-icon-cancel"
-                            onClick={this.props.removeModal.bind(this, this.props.id)}>X</button>
+                            onClick={this.closeModal}>X</button>
                     }
                   </div>
                 </div>
             }
 
             <div className="rrm-body">
-              <this.props.component {...this.props.options} {...this.props.data} removeModal={() => this.props.removeModal(this.props.id)}/>
+              <this.props.component {...this.props.options} {...this.props.data} removeModal={this.closeModal}/>
             </div>
           </div>
 
