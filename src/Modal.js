@@ -11,6 +11,11 @@ class Modal extends Component {
     this.closeModal = this.closeModal.bind(this);
   }
 
+  componentWillMount() {
+    //when modal mounts, the background page should not scroll as it causes unnecessary scrolling when modal content scrolls
+    document.documentElement.classList.remove('no-scroll');
+  }
+
   handleOnOutsideClick(e) {
     if (this.props.options.closeOnOutsideClick && !this.isChildOf(e.target, this.refs.modalContent) || false) {
       this.props.removeModal(this.props.id);
@@ -29,6 +34,8 @@ class Modal extends Component {
 
   closeModal() {
     this.props.removeModal(this.props.id);
+    //allowing the background page to scroll as usual when modal closes
+    document.documentElement.classList.remove('no-scroll');
     this.props.options.onCloseModal && this.props.options.onCloseModal();
   }
 
