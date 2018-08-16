@@ -13,7 +13,7 @@ class Modal extends Component {
 
   componentWillMount() {
     //when modal mounts, the background page should not scroll as it causes unnecessary scrolling when modal content scrolls
-    document.documentElement.classList.remove('no-scroll');
+    document.documentElement.classList.add('no-scroll');
   }
 
   handleOnOutsideClick(e) {
