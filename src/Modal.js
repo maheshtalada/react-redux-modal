@@ -7,7 +7,9 @@ import classnames from 'classnames';
 class Modal extends Component {
   constructor(props) {
     super(props);
-
+    this.state = {
+      title: props.options.title
+    };
     this.closeModal = this.closeModal.bind(this);
   }
 
@@ -41,6 +43,12 @@ class Modal extends Component {
     this.props.options.onCloseModal && this.props.options.onCloseModal();
   }
 
+  updateTitle(title) {
+    this.setState({
+      title
+    });
+  }
+
   render() {
     return (
       <div className="rrm-holder" style={{zIndex: `999${this.props.index}`}}>
@@ -49,7 +57,7 @@ class Modal extends Component {
           <div ref="modalContent" className={classnames('rrm-content', `m-${this.props.options.size}` || 'm-medium')}>
             {this.props.options.hideTitleBar ? null :
                 <div className="rrm-title">
-                  <h2>{this.props.options.title}</h2>
+                  <h2>{this.state.title}</h2>
                   <div className="rr-title-actions">
                     {this.props.options.hideCloseButton ? null :
                         <button
@@ -62,7 +70,7 @@ class Modal extends Component {
             }
 
             <div className="rrm-body">
-              <this.props.component {...this.props.options} {...this.props.data} removeModal={this.closeModal}/>
+              <this.props.component {...this.props.options} {...this.props.data} removeModal={this.closeModal} updateModalTitle={this.updateTitle}/>
             </div>
           </div>
 
