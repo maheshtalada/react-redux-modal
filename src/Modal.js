@@ -71,7 +71,7 @@ class Modal extends Component {
             }
 
             <div className="rrm-body">
-              <this.props.component {...this.props.options} {...this.props.data} removeModal={this.closeModal} updateModalTitle={this.updateTitle}/>
+              <this.props.component key={this.state.title} {...this.props.options} {...this.props.data} removeModal={this.closeModal} updateModalTitle={this.updateTitle}/>
             </div>
           </div>
 
