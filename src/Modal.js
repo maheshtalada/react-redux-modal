@@ -11,6 +11,7 @@ class Modal extends Component {
       title: props.options.title
     };
     this.closeModal = this.closeModal.bind(this);
+    this.forceCloseModal = this.forceCloseModal.bind(this);
     this.updateTitle = this.updateTitle.bind(this);
   }
 
@@ -44,6 +45,13 @@ class Modal extends Component {
     this.props.options.onCloseModal && this.props.options.onCloseModal();
   }
 
+  forceCloseModal() {
+    this.props.removeModal(this.props.id);
+    //allowing the background page to scroll as usual when modal closes
+    document.documentElement.classList.remove('no-scroll');
+    this.props.options.onForceCloseModal && this.props.options.onForceCloseModal();
+  }
+
   updateTitle(title) {
     this.setState({
       title
@@ -64,7 +72,7 @@ class Modal extends Component {
                         <button
                             type="button"
                             className="rr-close rrm-icon-cancel"
-                            onClick={this.closeModal}>X</button>
+                            onClick={this.forceCloseModal}>X</button>
                     }
                   </div>
                 </div>
