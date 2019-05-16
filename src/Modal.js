@@ -5,8 +5,19 @@ import classnames from 'classnames';
 class Modal extends Component {
   constructor(props) {
     super(props);
-
+    this.state = {
+      title: props.options.title
+    };
     this.closeModal = this.closeModal.bind(this);
+    this.forceCloseModal = this.forceCloseModal.bind(this);
+    this.updateTitle = this.updateTitle.bind(this);
+  }
+
+  componentWillMount() {
+    //  when modal mounts, the background page should not scroll as it causes unnecessary scrolling when modal content scrolls
+    if (this.props.options.backgroundNoScroll) {
+      document.documentElement.classList.add('no-scroll');
+    }
   }
 
   handleOnOutsideClick(e) {
@@ -27,7 +38,22 @@ class Modal extends Component {
 
   closeModal() {
     this.props.removeModal(this.props.id);
+    //allowing the background page to scroll as usual when modal closes
+    document.documentElement.classList.remove('no-scroll');
     this.props.options.onCloseModal && this.props.options.onCloseModal();
+  }
+
+  forceCloseModal() {
+    this.props.removeModal(this.props.id);
+    //allowing the background page to scroll as usual when modal closes
+    document.documentElement.classList.remove('no-scroll');
+    this.props.options.onForceCloseModal && this.props.options.onForceCloseModal();
+  }
+
+  updateTitle(title) {
+    this.setState({
+      title
+    });
   }
 
   render() {
@@ -38,20 +64,20 @@ class Modal extends Component {
           <div ref="modalContent" className={classnames('rrm-content', `m-${this.props.options.size}` || 'm-medium')}>
             {this.props.options.hideTitleBar ? null :
                 <div className="rrm-title">
-                  <h2>{this.props.options.title}</h2>
+                  <h2>{this.state.title}</h2>
                   <div className="rr-title-actions">
                     {this.props.options.hideCloseButton ? null :
                         <button
                             type="button"
                             className="rr-close rrm-icon-cancel"
-                            onClick={this.closeModal}>X</button>
+                            onClick={this.forceCloseModal}>X</button>
                     }
                   </div>
                 </div>
             }
 
             <div className="rrm-body">
-              <this.props.component {...this.props.options} {...this.props.data} removeModal={this.closeModal}/>
+              <this.props.component key={this.state.title} {...this.props.options} {...this.props.data} removeModal={this.closeModal} updateModalTitle={this.updateTitle}/>
             </div>
           </div>
 

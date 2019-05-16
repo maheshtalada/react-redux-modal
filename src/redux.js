@@ -31,6 +31,8 @@ export default createReducer(initialSate, {
     };
   },
   [CLEAR_ALL]: () => {
+    //allowing the background page to scroll as usual when modal closes
+    document.documentElement.classList.remove('no-scroll');
     return {
       modals: []
     };
