@@ -9,7 +9,6 @@ class Modal extends Component {
       title: props.options.title
     };
     this.closeModal = this.closeModal.bind(this);
-    this.forceCloseModal = this.forceCloseModal.bind(this);
     this.updateTitle = this.updateTitle.bind(this);
   }
 

@@ -39,8 +39,8 @@
       <file leaf-file-name="Modal.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Modal.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="93">
-              <caret line="40" column="4" lean-forward="false" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
+            <state relative-caret-position="198">
+              <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -74,12 +74,12 @@
             <state relative-caret-position="-1386">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <marker date="1558012936469" expanded="true" signature="1962:5343" ph="{...}" />
-                <marker date="1558012936469" expanded="true" signature="3277:3565" ph="{...}" />
-                <marker date="1558012936469" expanded="true" signature="4827:4838" ph="{&quot;type&quot;: 'button'...}" />
-                <marker date="1558012936469" expanded="true" signature="4827:5323" ph="{...}" />
-                <marker date="1558012936469" expanded="true" signature="5414:5813" ph="{&quot;id&quot;: _propTypes2.default.string...}" />
-                <marker date="1558012936469" expanded="true" signature="5576:5799" ph="{&quot;size&quot;: _propTypes2.default.string...}" />
+                <marker date="1558013900833" expanded="true" signature="1962:5309" ph="{...}" />
+                <marker date="1558013900833" expanded="true" signature="3277:3531" ph="{...}" />
+                <marker date="1558013900833" expanded="true" signature="4793:4804" ph="{&quot;type&quot;: 'button'...}" />
+                <marker date="1558013900833" expanded="true" signature="4793:5289" ph="{...}" />
+                <marker date="1558013900833" expanded="true" signature="5380:5779" ph="{&quot;id&quot;: _propTypes2.default.string...}" />
+                <marker date="1558013900833" expanded="true" signature="5542:5765" ph="{&quot;size&quot;: _propTypes2.default.string...}" />
               </folding>
             </state>
           </provider>
@@ -872,12 +872,12 @@
         <state relative-caret-position="-1386">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1558012936469" expanded="true" signature="1962:5343" ph="{...}" />
-            <marker date="1558012936469" expanded="true" signature="3277:3565" ph="{...}" />
-            <marker date="1558012936469" expanded="true" signature="4827:4838" ph="{&quot;type&quot;: 'button'...}" />
-            <marker date="1558012936469" expanded="true" signature="4827:5323" ph="{...}" />
-            <marker date="1558012936469" expanded="true" signature="5414:5813" ph="{&quot;id&quot;: _propTypes2.default.string...}" />
-            <marker date="1558012936469" expanded="true" signature="5576:5799" ph="{&quot;size&quot;: _propTypes2.default.string...}" />
+            <marker date="1558013900833" expanded="true" signature="1962:5309" ph="{...}" />
+            <marker date="1558013900833" expanded="true" signature="3277:3531" ph="{...}" />
+            <marker date="1558013900833" expanded="true" signature="4793:4804" ph="{&quot;type&quot;: 'button'...}" />
+            <marker date="1558013900833" expanded="true" signature="4793:5289" ph="{...}" />
+            <marker date="1558013900833" expanded="true" signature="5380:5779" ph="{&quot;id&quot;: _propTypes2.default.string...}" />
+            <marker date="1558013900833" expanded="true" signature="5542:5765" ph="{&quot;size&quot;: _propTypes2.default.string...}" />
           </folding>
         </state>
       </provider>
@@ -892,8 +892,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Modal.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="40" column="4" lean-forward="false" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
+        <state relative-caret-position="198">
+          <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
