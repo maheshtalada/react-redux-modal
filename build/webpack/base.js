@@ -18,19 +18,20 @@ module.exports = {
     publicPath: ''
   },
   module: {
-    preLoaders: [
+    /*preLoaders: [
       {
         test: /\.jsx?$/,
         loaders: ['eslint'],
         exclude: /node_modules/
       }
-    ],
+    ],*/
     loaders: [
       {
         test: /\.js?$/,
         exclude: /node_modules/,
-        loaders: ['react-hot', 'babel']
-      }, {
+        loaders: ['babel']
+      },
+       {
         test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
         exclude: /node_modules/,
         loader: 'url-loader'

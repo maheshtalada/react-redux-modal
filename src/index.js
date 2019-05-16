@@ -1,5 +1,3 @@
-'use strict';
-
 import ReduxModal from './ReduxModal';
 import reduxDuck from './redux';
 import {modalEmitter} from './emitter';

@@ -1,4 +1,3 @@
-'use strict';
 import EventEmitter from 'eventemitter3';
 const emitter = new EventEmitter();
 
