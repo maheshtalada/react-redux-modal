@@ -35,7 +35,8 @@ class Modal extends Component {
     }
   }
 
-  closeModal() {
+  async closeModal() {
+    this.props.options.onBeforeCloseModal && await this.props.options.onBeforeCloseModal();
     this.props.removeModal(this.props.id);
     //allowing the background page to scroll as usual when modal closes
     document.documentElement.classList.remove('no-scroll');
@@ -52,7 +53,6 @@ class Modal extends Component {
     return (
       <div className="rrm-holder" style={{zIndex: `999${this.props.index}`}}>
         <div className="scroll" onClick={this.handleOnOutsideClick.bind(this)}>
-
           <div ref="modalContent" className={classnames('rrm-content', `m-${this.props.options.size}` || 'm-medium')}>
             {this.props.options.hideTitleBar ? null :
                 <div className="rrm-title">
