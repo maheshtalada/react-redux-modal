@@ -35,7 +35,7 @@ class Modal extends Component {
     }
   }
 
-  async closeModal() {
+  closeModal() {
     this.props.removeModal(this.props.id);
     //allowing the background page to scroll as usual when modal closes
     document.documentElement.classList.remove('no-scroll');
